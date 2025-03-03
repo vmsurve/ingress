@@ -13,7 +13,7 @@ spec:
           - pathType: Prefix
             path: /shop
             backend:
-   service:
-    - name: online-shop-svc
-      port:
-         number: 5173
+               service:
+                - name: online-shop-svc
+                  port:
+                     number: 5173
