@@ -2,18 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: ingress
 
 metadata:
-  name: online-shop-ingress
-  namespace: online-shop
-  annotations:
-     nginx.ingress.kunernets.io/rewrite-taget: /
+   name: online-shop-ingress
+   namespace: online-shop
+   annotations:
+      nginx.ingress.kunernets.io/rewrite-taget: /
 spec:
    rules:
-   - http:
-       paths:
+    - http:
+         paths:
           - pathType: Prefix
             path: /shop
             backend:
-	service:
-	  name: online-shop-svc
-	  port:
-	     number: 5173
+   service:
+    - name: online-shop-svc
+      port:
+         number: 5173
